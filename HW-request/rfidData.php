@@ -42,7 +42,6 @@ if ($result1 = $conn->query($query1)) {
         $results1[] = $row;
     }
 
-
     /* free result set */
     $result1->free();
 }
@@ -55,15 +54,12 @@ if ($result2 = $conn->query($query2)) {
         $results2[] = $row;
     }
 
-
     /* free result set */
     $result2->free();
 }
 
-
 /* close connection */
 $conn->close();
-
 
 /* print json object*/
 $json_p = json_encode($results1);
