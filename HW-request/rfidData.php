@@ -66,14 +66,11 @@ $conn->close();
 
 
 /* print json object*/
-
-
 $json_p = json_encode($results1);
 echo $json_p;
 
 
 /* json object for email parameters */
-
 $json_e = json_encode($results2);
 $json_d = json_decode($json_e);
 
@@ -108,6 +105,4 @@ $mail->Body = 'The student ' . $json_d[0]->firstName . ' ' . $json_d[0]->lastNam
 $mail->addAddress($json_d[0]->email);
 $mail->Send();
 }
-
-
 ?>
