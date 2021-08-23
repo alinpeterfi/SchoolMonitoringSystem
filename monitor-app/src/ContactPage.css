@@ -1,0 +1,80 @@
+/* set so we can have the footer under the full viewport */
+.contact-page-div {
+  min-height: 100vh;
+}
+/* display flex so we can have responssive centered items  */
+.contact-page-body {
+  height: 80%;
+  margin-top: 3%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-page-panel {
+  min-height: 70vh;
+  width: 60vh;
+  margin: 0 auto;
+  border-radius: 5px;
+  border-color: var(--third-color);
+  border-style: solid;
+  border-width: thin;
+}
+
+.contact-page-panel-title {
+  padding: 2vw 2vw 1vw 2vw;
+  text-align: center;
+  font-size: 1.8em;
+  color: var(--third-color);
+  font-weight: bold;
+}
+/* different than the rest of the labels due to the fact that it's for information purposes only */
+.contact-page-header-tag {
+  font-size: 1em;
+  text-align: center;
+  padding: unset;
+}
+
+.contact-page-panel-header {
+  text-align: center;
+  padding-bottom: 2vh;
+}
+/* used to center and set the width of the fields */
+.form-control-contact {
+  width: 80%;
+  margin: 0 auto;
+}
+/* margin and display block so we can center the button */
+.contact-page-panel-form-btn {
+  background-color: var(--main-color);
+  color: var(--third-color);
+  margin: 3vh auto;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.3em;
+  display: block;
+}
+
+.contact-page-panel-form-btn:hover {
+  background-color: var(--sec-color);
+  color: var(--main-color);
+}
+/* focus to change the color of the selected field */
+.form-control:focus {
+  border-color: var(--main-color);
+  box-shadow: none;
+  border-width: medium;
+}
+
+@media (max-width: 1200px) {
+  .contact-page-body {
+    padding-bottom: 3%;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-page-panel {
+    width: 50vh;
+  }
+}

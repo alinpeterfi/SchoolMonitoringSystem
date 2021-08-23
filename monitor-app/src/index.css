@@ -1,0 +1,178 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+:root {
+  --main-color: #a3333d;
+  --sec-color: #b098a4;
+  --third-color: #fff;
+  --fourth-color: #271f30;
+  --fifth-color: rgba(39, 31, 48, 0.5);
+}
+/*
+    titlu= 1.8em
+    subtitlu=1.5em
+    navbar=1.3em
+    button=1.3em
+    paragraph=1.3em
+    */
+body,
+html {
+  height: 100%;
+}
+label {
+  font-size: 1.5em;
+  color: var(--third-color);
+  padding-left: 5vh;
+}
+
+.container-div {
+  height: 100%;
+  background-image: url("https://cdn.hipwallpaper.com/i/78/42/ENmtT2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.container-div-shadow {
+  box-shadow: inset 10px 0 0 2000px var(--fifth-color);
+}
+
+a:hover {
+  text-decoration: none;
+}
+/* higher distance above the navbar */
+.navbar-div {
+  padding-top: 2vh;
+  height: 10vh;
+}
+/* set navbar item text color  */
+.nav-link {
+  color: var(--fourth-color);
+}
+/* set navbar item text color while hovered*/
+.nav-link:hover {
+  color: var(--third-color);
+}
+/* navbar padding */
+.navbar {
+  padding: 0 10px;
+}
+/* navbar item detailed settings */
+.nav-item {
+  font-size: 1.5em;
+  padding: 0px 10px 0 10px;
+  margin: 5px;
+  /* border seettings so it would not change size while hovered */
+  border-radius: 10px;
+  border-style: solid;
+  border-width: thin;
+  border-color: transparent;
+}
+.dropdown-toggle {
+  font-weight: bold;
+  color: var(--fourth-color);
+}
+a.dropdown-toggle.nav-link {
+  border-bottom: solid;
+  border-color: var(--main-color);
+}
+/* navbar action while hovered */
+.nav-item:hover {
+  background-color: var(--main-color);
+  border-radius: 5px;
+}
+
+.dropdown-item {
+  font-weight: bold;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+hr {
+  background: var(--fourth-color);
+}
+
+/* container footer divided by site utility and social media */
+.page-footer {
+  border-top: 1px solid var(--fourth-color);
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+/* site utility on the left side */
+.page-footer-left {
+  display: flex;
+  padding: 10px 0;
+}
+/* social media on the right side */
+.page-footer-right {
+  display: flex;
+  justify-content: flex-end;
+  padding: 8px 0 0 20vw;
+}
+/* setting the preffered distance between the items of utility*/
+.page-footer-left-item {
+  padding: 0 10px;
+}
+/* setting the preffered distance between the items of social media */
+.page-footer-right-item {
+  padding: 0 10px;
+}
+/* footer icons size */
+.img-page-footer {
+  height: 2vw;
+  width: auto;
+}
+/* styling of the links on the bottom */
+.page-footer-text {
+  color: var(--fourth-color);
+}
+/* hover for bottom links */
+.page-footer-text:hover {
+  text-decoration: none;
+  color: var(--main-color);
+}
+/* responssive settings for small screens */
+@media (max-width: 480px) {
+  .img-page-footer {
+    height: 4vh !important;
+    width: auto;
+  }
+  .page-footer-right {
+    padding: 8px 0 0 2vw !important;
+  }
+  .page-footer-right-item {
+    padding: 0 5px;
+  }
+  .page-footer-left-item {
+    padding: 0 5px !important;
+  }
+}
+/* responssive settings for medium screens */
+@media (max-width: 767px) {
+  .navbar-collapse {
+    background-color: var(--main-color) !important;
+  }
+  .nav-link {
+    color: var(--fourth-color);
+  }
+  .nav-link:hover {
+    color: var(--third-color) !important;
+  }
+  .img-page-footer {
+    height: 4vh !important;
+    width: auto;
+  }
+}

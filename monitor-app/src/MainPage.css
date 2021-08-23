@@ -1,0 +1,179 @@
+/* we need to set the button, title and subtitle realative to the */
+.main-page-div {
+  min-height: 100vh;
+  position: relative;
+}
+
+.main-page-btn-div {
+  padding: 4vh 0 0 20vh;
+}
+/* main page button positioning and styling */
+.btn-main-page {
+  padding: 12px 24px;
+  border: none;
+  font-size: 1.5em;
+  background-color: var(--main-color);
+  color: var(--third-color);
+}
+/* main page button hover styling */
+.btn-main-page:hover {
+  background-color: var(--sec-color);
+  color: var(--main-color);
+}
+/* we split the main title in 2 so we could have underline under the first word */
+.main-page-title-full {
+  display: flex;
+  flex-direction: row;
+  padding: 15vh 0 0 10vh;
+  font-size: 2.5em;
+}
+/* first word with underline */
+.main-page-title1 {
+  font-weight: Bolder;
+  color: white;
+  margin: 5px;
+}
+/* the border for the title  */
+.main-page-title1-border {
+  border-bottom: solid;
+  border-bottom-color: var(--main-color);
+}
+/* the rest of the words without borders */
+.main-page-title2 {
+  font-weight: bold;
+  color: var(--third-color);
+  margin: 5px;
+}
+/* main page subtitle positioning and styling */
+.main-page-subtitle {
+  padding: 0 0 0 10vh;
+  font-weight: bold;
+  color: var(--third-color);
+  font-size: 1.8em;
+  margin: 5px;
+}
+
+/* styling main page paragraph under the main image */
+.main-page-paragraph-body {
+  text-align: justify;
+  font-size: 1.3em;
+  padding: 1vh 10% 0 10vh;
+
+  margin: 5px;
+  color: var(--fourth-color);
+}
+/* the body of the bottom list */
+.main-page-paragraph-bottom {
+  width: 100%;
+  text-align: center;
+  padding: 3vh 3vw 0 3vw;
+  font-size: 1.5em;
+}
+/* styling of the items from the list */
+.main-page-bottom {
+  display: flex;
+  color: var(--third-color);
+  position: absolute;
+  bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+/* styling of the links on the bottom */
+.main-page-link-bottom {
+  color: var(--fourth-color);
+}
+/* hover for bottom links */
+.main-page-link-bottom:hover {
+  text-decoration: none;
+  color: var(--main-color);
+}
+/* set the text based on status */
+.main-page-status-div {
+  height: 7vh;
+  width: 50%;
+  color: var(--third-color);
+  font-weight: bold;
+  border-radius: 5px;
+  border-color: var(--third-color);
+  border-style: solid;
+  border-width: thin;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1em;
+}
+.main-page-status-p {
+  padding-top: 2vh;
+  padding-left: 0.5vh;
+}
+
+@media (max-width: 480px) {
+  /* smartphones, iPhone, portrait 480x320 phones */
+  .navbar-collapse {
+    background-color: var(--main-color);
+  }
+  /* white color to the link */
+  .nav-link {
+    color: var(--third-color) !important;
+  }
+  /* changing the font size */
+  .btn-main-page {
+    font-size: 1.4em;
+  }
+
+  .main-page-title-full {
+    font-size: 1.5em;
+    padding: 10vh 0 0 0vh;
+    justify-content: center;
+  }
+  .main-page-subtitle {
+    font-size: 1.2em;
+    padding: 0;
+    text-align: center;
+  }
+  .main-page-paragraph-body {
+    font-size: 1.1em;
+    padding: 1vh 10%;
+  }
+  .main-page-link-bottom {
+    font-size: 0.9em;
+  }
+  /* centering the button */
+  .main-page-btn-div {
+    text-align: center;
+  }
+  /* unsetting because we don;t know the size of the page and the bottom links will not fit in 100vh */
+  .main-page-bottom {
+    bottom: unset;
+    margin-left: unset;
+    margin-right: unset;
+    left: unset;
+    right: unset;
+  }
+  .main-page-status-div {
+    font-size: 1.1em;
+    margin: 0 auto;
+    height: 8vh;
+    width: 90%;
+  }
+}
+
+@media (max-width: 780px) {
+  .main-page-btn-div {
+    padding: 4vh 0 0 0;
+    text-align: center;
+  }
+  .main-page-status-div {
+    margin: 0 auto;
+    width: 80%;
+    font-size: 1.1em;
+  }
+
+  /* used so it can fit better */
+  .main-page-title-full {
+    padding: 5vh 0 0 10vh;
+  }
+}

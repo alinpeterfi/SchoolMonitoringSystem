@@ -1,0 +1,132 @@
+/* set so we can have the footer under the full viewport */
+.signup-page-div {
+  height: 100vh;
+}
+/* style and center */
+.signup-page-body {
+  height: 80%;
+  margin-top: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup-page-panel {
+  min-height: 75vh;
+  width: 45vw;
+  margin: 0 auto;
+  border-radius: 5px;
+  border-color: var(--third-color);
+  border-style: solid;
+  border-width: thin;
+}
+
+.signup-page-panel-title {
+  padding: 2vw;
+  text-align: center;
+  font-size: 1.8em;
+
+  color: var(--third-color);
+  font-weight: bold;
+}
+
+.form-control-signup {
+  width: 80%;
+}
+/* flex and wrap so we can have 2 items per row */
+.signup-page-panel-form-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+/* 50% = 2 items / padding-left for centering */
+.signup-page-panel-form-item {
+  flex: 50%;
+  padding-left: 8%;
+}
+
+.signup-page-panel-label {
+  padding-left: 0;
+}
+
+.signup-page-panel-form-btn {
+  background-color: var(--main-color);
+  color: var(--third-color);
+  margin: 3vh auto;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.3em;
+  display: block;
+}
+
+.signup-page-panel-form-btn:hover {
+  background-color: var(--sec-color);
+  color: var(--main-color);
+}
+.form-error {
+  color: var(--main-color);
+}
+
+.form-control:focus {
+  border-color: var(--main-color);
+  box-shadow: none;
+  border-width: medium;
+}
+
+@media (max-width: 480px) {
+  .signup-page-div {
+    height: 100%;
+    padding-bottom: 5%;
+  }
+
+  .signup-page-panel {
+    height: 100%;
+    width: 50vh;
+  }
+
+  .signup-page-body {
+    height: 100%;
+  }
+
+  .signup-page-panel-form-container {
+    display: unset;
+    flex-wrap: unset;
+  }
+  /* unset flex because we want the fields to be one under another */
+  .signup-page-panel-form-item {
+    flex: unset;
+    padding-left: 17%;
+  }
+}
+@media (max-width: 1046px) {
+  .signup-page-panel {
+    width: 60vw;
+    min-height: 65vh;
+  }
+}
+
+@media (max-width: 767px) {
+  .signup-page-div {
+    height: 100%;
+    padding-bottom: 5%;
+  }
+
+  .signup-page-panel {
+    height: 100%;
+    width: 50vh;
+  }
+  /* adjust according to the page */
+  .signup-page-body {
+    height: 100%;
+  }
+  /* unset flex because we want the fields to be one under another */
+  .signup-page-panel-form-container {
+    display: unset;
+    flex-wrap: unset;
+  }
+
+  .signup-page-panel-form-item {
+    flex: unset;
+    padding-left: 17%;
+  }
+}
