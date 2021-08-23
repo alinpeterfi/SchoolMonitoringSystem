@@ -1,11 +1,8 @@
 <?php
-
 require 'D:/XAMPP/htdocs/PHPMailer/src/PHPMailer.php';
 require 'D:/XAMPP/htdocs/PHPMailer/src/SMTP.php';
 require 'D:/XAMPP/htdocs/PHPMailer/src/Exception.php';
-
 use PHPMailer\PHPMailer\PHPMailer;
-
 
    $servername = "localhost";
    $username = "root";
@@ -22,9 +19,6 @@ use PHPMailer\PHPMailer\PHPMailer;
    if ($conn->connect_error) {
       die("Connection failed: " . $conn->connect_error);
    }
-
-
-
 
    $query1 = "SELECT firstName, lastName, entranceStatus FROM students WHERE rfid = '$rfid'";
    $query2 = "SELECT firstName, lastName, entranceStatus, email, sms FROM students WHERE rfid = '$rfid'";
@@ -92,7 +86,7 @@ $mail->Host = 'smtp.gmail.com';
 $mail->Port = '465';
 $mail->isHtml();
 $mail->Username = 'schoolmonitorsystem@gmail.com';
-$mail->Password = 'Beatmenoob1';
+$mail->Password = '';
 $mail->Subject = 'Entrance Status';
 $mail->setFrom("schoolmonitorsystem@gmail.com");
 
